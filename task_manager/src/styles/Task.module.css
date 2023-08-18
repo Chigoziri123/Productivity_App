@@ -1,0 +1,23 @@
+/* @import "Properties.module.css" */
+
+.task {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid var(--white);
+    border-radius: 0.25rem;
+}
+
+.task .collapsedTask {
+    .moveTask {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        padding: 0.3rem 0.5rem;
+    }
+}
+
+.task form {
+    display: flex;
+    flex-direction: column;
+}
