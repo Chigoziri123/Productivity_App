@@ -53,7 +53,35 @@ export default function Task(props) {
               name="urgency"
             />
           </label>
+
+          <label className={`medium ${urgencyLevel === "medium" ? "selected" : ""}`}>
+            <input 
+              urgency="medium"
+              onChange={setUrgency}
+              type="radio"
+              name="urgency"
+            />
+          </label>
+
+          <label className={`high ${urgencyLevel === "high" ? "selected" : ""}`}>
+            <input 
+              urgency="high"
+              onChange={setUrgency}
+              type="radio"
+              name="urgency"
+            />
+          </label>
         </div>
+        {/* Save Button */}
+        <button onClick={() => {setFormAction("save");}} 
+        className='buttton'>{collapsed ? "Edit" : "Save"}
+        </button>
+
+        {/* Delete Button */}
+        { collapsed && <button onClick={() => {setFormAction("delete")}} 
+        className='buttton delete'>X
+        </button>}
+
       </form> 
       <button onclick={handleMoveRight} className="button moveTask">&#187;</button>
     </div>  
