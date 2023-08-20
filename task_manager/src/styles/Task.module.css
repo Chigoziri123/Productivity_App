@@ -1,4 +1,4 @@
-/* @import "Properties.module.css" */
+@import "Properties.module.css";
 
 .task {
     padding: 1rem;
@@ -9,15 +9,68 @@
     border-radius: 0.25rem;
 }
 
-.task .collapsedTask {
-    .moveTask {
-        margin-bottom: 0.5rem;
-        font-size: 1.5rem;
-        padding: 0.3rem 0.5rem;
-    }
+.collapsedTask .moveTask {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.3rem 0.5rem;
 }
 
 .task form {
     display: flex;
     flex-direction: column;
+}
+
+.title, .description, .urgencyLabels {
+    margin: 0.5rem 0;
+}
+
+.input {
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid var(--grey);
+    background-color: transparent;
+    color: var(--white);
+}
+
+.urgenctLabels label {
+    display: inline-block;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.selected {
+    font-weight: bold;
+}
+
+.button {
+    background-color: var(--gold);
+    border: none;
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.button .delete {
+    background-color: var(--red);
+}
+
+.button:hover {
+    background-color: var(--highlight);
+}
+
+.moveTask {
+    background-color: var(--green);
+    border: none;
+    color: var(--white);
+    padding: 0.3rem 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.moveTask:hover {
+    background-color: var(--highlight);
 }
